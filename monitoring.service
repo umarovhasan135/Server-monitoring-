@@ -1,0 +1,13 @@
+[Unit]
+Description=Server Monitoring Service
+After=network.target
+
+[Service]
+Type=simple
+User=hasan
+WorkingDirectory=/home/hasan/monitoring
+ExecStart=/bin/bash /home/hasan/monitoring/start.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
